@@ -15,7 +15,7 @@ def highest_bidder(bid_record):
     max_bid = 0
     winner_name = ""
     for bidder in bid_record:
-        bid_amount = bidders[bidder]
+        bid_amount = bid_record[bidder]
         if bid_amount > max_bid:
             max_bid = bid_amount
             winner_name = bidder
