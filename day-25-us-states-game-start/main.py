@@ -3,32 +3,11 @@ from turtle import Screen, Turtle,TurtleScreen
 import pandas as pd
 
 
-def get_click_position(x, y):
-    """
-    a function with two arguments which will be called with the
-    coordinates of the clicked point.
-
-    :param x:
-    :param y:
-    :return:
-    """
-    print(x, y)
-    return x, y
-
 
 screen = Screen()
 screen.title("U.S States Game")
 image = "blank_states_img.gif"
 screen.bgpic(image)
-
-
-# allows the turtle screen to start listening for events that the user might trigger
-# we have to bind a function that will be triggered when a particular key is passed on the keyboard.
-screen.listen()
-
-# event listener-listen for when the mouse clicks, then call the function and pass the (x,y) coordinate
-# of the click location
-screen.onclick(fun=get_click_position)
 
 timmy = Turtle()
 timmy.penup()
